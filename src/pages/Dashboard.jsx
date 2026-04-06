@@ -42,7 +42,7 @@ export function Dashboard() {
     setControlReady(false);
     pendingRemoteIceRef.current = [];
 
-    const socket = new WebSocket("ws://localhost:8081/signaling");
+    const socket = new WebSocket("ws://172.26.83.44:8081/signaling");
     socketRef.current = socket;
 
     socket.onopen = async () => {

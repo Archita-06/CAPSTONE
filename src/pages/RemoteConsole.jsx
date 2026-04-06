@@ -3,7 +3,7 @@ import { api } from "../api/client";
 import { useAuth } from "../UserContext";
 
 const SIGNALING_URL =
-  import.meta.env.VITE_SIGNALING_URL || "ws://localhost:8081/signaling";
+  import.meta.env.VITE_SIGNALING_URL || "ws://172.26.83.44:8081/signaling";
 const DC_LABEL = "remote-control";
 
 export function RemoteConsole() {
