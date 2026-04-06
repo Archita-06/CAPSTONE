@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api, TOKEN_KEY } from "../api/client";
+import { getIceServers, getSignalingUrl } from "../config/runtime";
 import { useAuth } from "../UserContext";
 
-const SIGNALING_URL =
-  import.meta.env.VITE_SIGNALING_URL || "ws://172.26.83.44:8081/signaling";
+const SIGNALING_URL = getSignalingUrl();
+const ICE_SERVERS = getIceServers();
 const DC_LABEL = "remote-control";
 
 export function EmailRemoteConsole() {
@@ -103,7 +104,7 @@ export function EmailRemoteConsole() {
 
   const startPeer = async (socket) => {
     const pc = new RTCPeerConnection({
-      iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+      iceServers: ICE_SERVERS,
     });
     pcRef.current = pc;
 

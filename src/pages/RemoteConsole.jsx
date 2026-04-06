@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { api } from "../api/client";
+import { getApiBaseUrl, getIceServers, getSignalingUrl } from "../config/runtime";
 import { useAuth } from "../UserContext";
 
-const SIGNALING_URL =
-  import.meta.env.VITE_SIGNALING_URL || "ws://172.26.83.44:8081/signaling";
+const API_BASE_URL = getApiBaseUrl();
+const SIGNALING_URL = getSignalingUrl();
+const ICE_SERVERS = getIceServers();
+const ICE_SERVERS_JSON = import.meta.env.VITE_ICE_SERVERS?.trim() || "";
 const DC_LABEL = "remote-control";
 
 export function RemoteConsole() {
@@ -152,7 +155,7 @@ export function RemoteConsole() {
       socket.onopen = async () => {
         try {
           const pc = new RTCPeerConnection({
-            iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+            iceServers: ICE_SERVERS,
           });
           pcRef.current = pc;
 
@@ -354,7 +357,7 @@ export function RemoteConsole() {
   };
 
   const hostLaunchCommand = selectedHost
-    ? `$env:HOST_OWNER_EMAIL="${user?.email}"; $env:HOST_KEY="${selectedHost.hostKey}"; $env:HOST_NAME="${selectedHost.hostName.replaceAll(
+    ? `${ICE_SERVERS_JSON ? `$env:CAPSTONE_ICE_SERVERS='${ICE_SERVERS_JSON}'; ` : ""}$env:CAPSTONE_API_BASE="${API_BASE_URL}"; $env:CAPSTONE_SIGNALING_URL="${SIGNALING_URL}"; $env:HOST_OWNER_EMAIL="${user?.email}"; $env:HOST_KEY="${selectedHost.hostKey}"; $env:HOST_NAME="${selectedHost.hostName.replaceAll(
         '"',
         ""
       )}"; mvn exec:java`

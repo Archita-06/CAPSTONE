@@ -1,7 +1,7 @@
 import axios from "axios";
+import { getApiBaseUrl } from "../config/runtime";
 
-const baseURL =
-  import.meta.env.VITE_API_URL?.replace(/\/$/, "") || "http://172.26.83.44:8081";
+const baseURL = getApiBaseUrl();
 
 export const TOKEN_KEY = "ra_access_token";
 
