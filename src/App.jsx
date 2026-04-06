@@ -5,7 +5,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
 import { Register } from "./pages/Register";
-import { Dashboard } from "./pages/Dashboard";
+import { EmailRemoteConsole } from "./pages/EmailRemoteConsole";
 
 function Layout() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
               path="/dashboard"
               element={
                 <ProtectedRoute>
-                  <Dashboard />
+                  <EmailRemoteConsole />
                 </ProtectedRoute>
               }
             />
