@@ -42,20 +42,20 @@ export function Register() {
     <div className="auth-page">
       <div className="auth-layout">
         <section className="auth-spotlight">
-          <p className="eyebrow">Create the workspace</p>
-          <h1>Launch a polished remote desktop experience your audience will remember.</h1>
+          <p className="eyebrow">Create account</p>
+          <h1>Set up your remote access workspace.</h1>
           <p className="auth-lede">
-            Register once, bring your host online, and operate from a dashboard
-            designed to feel bold, premium, and production-ready.
+            Register once, connect your host machine, and manage access requests
+            through a clean remote desktop dashboard.
           </p>
           <div className="auth-points">
             <div>
-              <strong>Host-managed trust</strong>
+              <strong>Host-controlled approval</strong>
               <span>Viewer access still depends on explicit approval and configurable control levels.</span>
             </div>
             <div>
-              <strong>Capstone-ready polish</strong>
-              <span>Sharper hierarchy, cleaner interaction states, and a UI that looks built with intent.</span>
+              <strong>Clean operator workflow</strong>
+              <span>The interface is structured to make lookup, approval, and session control easy to follow.</span>
             </div>
           </div>
         </section>

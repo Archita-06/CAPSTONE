@@ -15,8 +15,8 @@ export function AppShell({ children }) {
               <span className="brand-mark-core" />
             </span>
             <span className="brand-copy">
-              <span className="brand-text">Velora Remote</span>
-              <span className="brand-subtext">Secure cinematic desktop access</span>
+              <span className="brand-text">RemoteAccess Suite</span>
+              <span className="brand-subtext">Secure remote desktop and access approval</span>
             </span>
           </Link>
 
@@ -38,7 +38,7 @@ export function AppShell({ children }) {
                     isActive ? "nav-link active" : "nav-link"
                   }
                 >
-                  Mission control
+                  Dashboard
                 </NavLink>
                 <span className="nav-user">{user.name}</span>
                 <button type="button" className="btn btn-ghost" onClick={logout}>
@@ -56,7 +56,7 @@ export function AppShell({ children }) {
                   Sign in
                 </NavLink>
                 <Link to="/register" className="btn btn-primary btn-sm">
-                  Launch workspace
+                  Create account
                 </Link>
               </>
             )}
@@ -68,7 +68,7 @@ export function AppShell({ children }) {
 
       <footer className="site-footer">
         <div className="site-footer-inner">
-          <span>Built for trusted sessions, approval-based access, and live operator control.</span>
+          <span>Secure access requests, host approval, and live desktop control.</span>
           <span>Capstone remote desktop platform.</span>
         </div>
       </footer>

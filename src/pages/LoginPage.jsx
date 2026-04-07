@@ -39,20 +39,20 @@ export function LoginPage() {
     <div className="auth-page">
       <div className="auth-layout">
         <section className="auth-spotlight">
-          <p className="eyebrow">Welcome back</p>
-          <h1>Reconnect to your secure remote workspace.</h1>
+          <p className="eyebrow">Sign in</p>
+          <h1>Access your remote desktop dashboard.</h1>
           <p className="auth-lede">
-            Step into a cleaner command center for viewer sessions, access requests,
-            and approved desktop control.
+            Manage host discovery, access requests, and approved desktop sessions
+            from one secure interface.
           </p>
           <div className="auth-points">
             <div>
-              <strong>Zero guesswork</strong>
-              <span>See host status, approval posture, and session logs in one place.</span>
+              <strong>See host status</strong>
+              <span>Track availability, access policy, and session activity in one place.</span>
             </div>
             <div>
-              <strong>Low-friction flow</strong>
-              <span>From sign-in to approved session, every action stays guided and obvious.</span>
+              <strong>Start faster</strong>
+              <span>Move from login to approved remote access without extra setup in the viewer app.</span>
             </div>
           </div>
         </section>

@@ -9,22 +9,22 @@ export function HomePage() {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Trusted remote operations</p>
-            <h1>Command a desktop from anywhere with the confidence of a private control room.</h1>
+            <p className="eyebrow">Secure remote access</p>
+            <h1>Remote desktop sessions with clear approval, live viewing, and controlled access.</h1>
             <p className="lede">
-              Velora Remote blends approval-based access, low-latency WebRTC streaming,
-              and a polished viewer workflow into a capstone experience that feels ready
-              for production.
+              RemoteAccess Suite helps a viewer connect to a registered host,
+              request the right access level, and start a live WebRTC session after
+              host approval.
             </p>
             <div className="hero-actions">
               {user ? (
                 <Link to="/dashboard" className="btn btn-primary btn-lg">
-                  Enter mission control
+                  Open dashboard
                 </Link>
               ) : (
                 <>
                   <Link to="/register" className="btn btn-primary btn-lg">
-                    Create your workspace
+                    Create account
                   </Link>
                   <Link to="/login" className="btn btn-secondary btn-lg">
                     Sign in
@@ -36,14 +36,14 @@ export function HomePage() {
 
           <div className="hero-showcase">
             <div className="hero-panel hero-panel-primary">
-              <span className="hero-panel-label">Live stack</span>
-              <strong>Encrypted stream plus control channel</strong>
-              <p>Viewer requests, host approval, and guided takeover in one seamless flow.</p>
+              <span className="hero-panel-label">Session flow</span>
+              <strong>Viewer request, host approval, remote session</strong>
+              <p>Every connection follows a clear sequence before screen access begins.</p>
             </div>
             <div className="hero-panel hero-panel-secondary">
-              <span className="hero-panel-label">Production posture</span>
-              <strong>Designed to look enterprise-grade, not student-grade</strong>
-              <p>Clean dashboard surfaces, confident hierarchy, and a visual language built to impress.</p>
+              <span className="hero-panel-label">Platform design</span>
+              <strong>Built for demonstrations, reviews, and real deployments</strong>
+              <p>A sharper interface, cleaner hierarchy, and a more professional product presentation.</p>
             </div>
             <div className="hero-metrics">
               <article className="metric-card">
@@ -65,31 +65,31 @@ export function HomePage() {
 
       <section className="feature-grid">
         <article className="feature-card">
-          <span className="feature-kicker">Access</span>
+          <span className="feature-kicker">Security</span>
           <h3>Identity-first remote sessions</h3>
           <p>
             Passwords stay hashed, JWT sessions stay signed, and every connection request is anchored to a real user identity.
           </p>
         </article>
         <article className="feature-card">
-          <span className="feature-kicker">Latency</span>
+          <span className="feature-kicker">Streaming</span>
           <h3>Fast viewing with operator precision</h3>
           <p>
             Low-latency desktop streaming meets a dedicated control channel for keyboard, mouse, and wheel events.
           </p>
         </article>
         <article className="feature-card">
-          <span className="feature-kicker">Workflow</span>
+          <span className="feature-kicker">Approval</span>
           <h3>Clear handoff from request to approval</h3>
           <p>
             Hosts stay in charge while viewers get a clean, modern path from discovery to approved access.
           </p>
         </article>
         <article className="feature-card feature-card-accent">
-          <span className="feature-kicker">Presentation</span>
-          <h3>Built to stand out in a capstone review</h3>
+          <span className="feature-kicker">Product</span>
+          <h3>Designed to feel ready for production</h3>
           <p>
-            Strong visual identity, polished spacing, and premium dashboard framing turn the demo into a statement.
+            A stronger visual system helps the product feel credible during demos, reviews, and client-facing walkthroughs.
           </p>
         </article>
       </section>

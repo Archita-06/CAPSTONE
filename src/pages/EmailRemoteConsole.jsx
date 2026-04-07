@@ -288,15 +288,15 @@ export function EmailRemoteConsole() {
             <p className="dashboard-welcome">
               Signed in as <strong>{user?.name}</strong> ({user?.email})
             </p>
-            <h1 className="dashboard-headline">Mission control for remote access.</h1>
+            <h1 className="dashboard-headline">Remote access dashboard.</h1>
             <p className="dashboard-help">
-              Search by host email, request the exact access tier you need, and
-              step into a live session once the desktop owner approves the handoff.
+              Search by host email, request the access level you need, and start a
+              live desktop session once the host approves the request.
             </p>
           </div>
           <div className="dashboard-callout">
             <span className="dashboard-callout-label">Live posture</span>
-            <strong>{status === "connected" ? "Session active" : "Ready to request access"}</strong>
+            <strong>{status === "connected" ? "Session active" : "Ready for access request"}</strong>
             <p>{hostInfo?.online ? "Host is online and listening." : "Host must come online before a session can begin."}</p>
           </div>
         </div>
@@ -305,22 +305,22 @@ export function EmailRemoteConsole() {
           <article className="summary-card">
             <span className="summary-label">Host state</span>
             <strong>{hostInfo ? (hostInfo.online ? "Online" : "Offline") : "Waiting"}</strong>
-            <p>{hostInfo?.hostName || "Look up a host to see live device details."}</p>
+            <p>{hostInfo?.hostName || "Look up a host to load its device details."}</p>
           </article>
           <article className="summary-card">
             <span className="summary-label">Approvals granted</span>
             <strong>{approvedCount}</strong>
-            <p>Successful access approvals recorded in your recent activity feed.</p>
+            <p>Successful approvals recorded in your recent activity feed.</p>
           </article>
           <article className="summary-card">
             <span className="summary-label">Sessions started</span>
             <strong>{sessionCount}</strong>
-            <p>Tracked handshakes that reached the active remote session stage.</p>
+            <p>Remote connections that reached the active session stage.</p>
           </article>
           <article className="summary-card summary-card-accent">
             <span className="summary-label">Latest event</span>
             <strong>{latestLog ? latestLog.eventType.replaceAll("_", " ") : "No activity yet"}</strong>
-            <p>{latestLog?.message || "Your activity timeline will populate as viewers connect."}</p>
+            <p>{latestLog?.message || "Your recent host and viewer events will appear here."}</p>
           </article>
         </div>
       </section>
